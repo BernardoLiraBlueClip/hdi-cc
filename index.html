@@ -3,7 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     </head>
     <body>        
-        <h1>Una página de prueba v4.0</h1>
+        <h1>Una página de prueba v4.1</h1>
 	    
 <!------------------------------------------>
 
@@ -84,6 +84,49 @@
 </script>
 <button onclick="bootstrapChat()">
 	Click me to show the Embedded Chat experience.
-</button>	    
+</button>	
+	    
+<!-- newer -->
+<script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+// Store our panel into a variable.
+var $myPanel = $("#live-chat");
+
+// Get the height of the panel dynamically.
+var $myPanelHeight = parseInt($myPanel.height());
+
+// Immediately set the opacity to 0 - to hide it and set its bottom to minus its height.
+$myPanel.css({ "opacity" : 0, "bottom" : "-" + $myPanelHeight + "px" });
+
+// Set a timeout for the panel to slide and fade in.
+setTimeout(function() {
+
+$myPanel.animate({
+
+    // The CSS properties we want to animate (opacity and bottom position).
+    opacity: 1,
+    bottom: '0'
+
+  }, 2000, function() {
+
+    // Animation complete. 
+    // You can put other code here to do something after it has slid-in.
+
+  });
+
+}, 30000); // 30 seconds in MS
+
+
+}); 
+</script>
+
+<div id="live-chat" style="position: absolute; bottom: 0px; right:100px; z-index:5;">
+ <h4>Need Help?</h4>
+ <p>Click the link below for assistance</p>
+ <a href="live-chat.php">Chat with a salesman</a>
+</div>
+
     </body>
 </html>
