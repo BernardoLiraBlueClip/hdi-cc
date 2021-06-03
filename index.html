@@ -3,7 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     </head>
     <body>        
-        <h1>Una página de prueba v4.1</h1>
+        <h1>Una página de prueba v5.0</h1>
 	    
 <!------------------------------------------>
 
@@ -24,7 +24,7 @@
 		//embedded_svc.settings.displayHelpButton = 'true'; //O falso
 		embedded_svc.settings.language = 'es-CL'; //Por ejemplo, ingrese 'en' o 'en-US'
 		embedded_svc.settings.prechatBackgroundImgURL = "https://raw.githubusercontent.com/BernardoLiraBlueClip/hdi-cc/main/head.png?raw=true";
-		embedded_svc.settings.displayHelpButton = "false";
+		embedded_svc.settings.displayHelpButton = 'false';
 		embedded_svc.settings.smallCompanyLogoImgURL = "https://raw.githubusercontent.com/BernardoLiraBlueClip/hdi-cc/main/boton-invitacion-chat.png?raw=true";
 
 		embedded_svc.settings.defaultMinimizedText = ''; //(Toma como valor predeterminado Sesión de chat con un experto)
@@ -45,7 +45,7 @@
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
-		embedded_svc.waitingStateBackgroundImgURL = "https://raw.githubusercontent.com/BernardoLiraBlueClip/hdi-cc/main/boton-invitacion-chat.png?raw=true";
+		embedded_svc.waitingStateBackgroundImgURL = "";
 		embedded_svc.init(
 			'https://hdiseguros1--chatcenter.my.salesforce.com',
 			'https://chatcenter-01.cs21.force.com/CC',
@@ -126,6 +126,9 @@ $myPanel.animate({
  <h4>Need Help?</h4>
  <p>Click the link below for assistance</p>
  <a href="live-chat.php">Chat with a salesman</a>
+<button onclick="bootstrapChat()">
+	Click me to show the Embedded Chat experience.
+</button>	
 </div>
 
     </body>
