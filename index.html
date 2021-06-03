@@ -3,7 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     </head>
     <body>        
-        <h1>Una página de prueba v2.1</h1>
+        <h1>Una página de prueba v2.2</h1>
 	    
 <!------------------------------------------>
 
@@ -20,11 +20,12 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
+		//https://github.com/BernardoLiraBlueClip/hdi-cc/blob/main/boton-invitacion-chat.png?raw=true
 		embedded_svc.settings.displayHelpButton = true; //O falso
 		embedded_svc.settings.language = 'es-CL'; //Por ejemplo, ingrese 'en' o 'en-US'
-		embedded_svc.settings.prechatBackgroundImgURL = "https://raw.githubusercontent.com/BernardoLiraBlueClip/hdi-cc/main/head.png";
+		embedded_svc.settings.prechatBackgroundImgURL = "https://raw.githubusercontent.com/BernardoLiraBlueClip/hdi-cc/main/head.png?raw=true";
 		embedded_svc.settings.displayHelpButton = "true";
-		embedded_svc.settings.smallCompanyLogoImgURL = "https://raw.githubusercontent.com/BernardoLiraBlueClip/hdi-cc/main/boton-invitacion-chat.png";
+		embedded_svc.settings.smallCompanyLogoImgURL = "https://raw.githubusercontent.com/BernardoLiraBlueClip/hdi-cc/main/boton-invitacion-chat.png?raw=true";
 
 		embedded_svc.settings.defaultMinimizedText = '¡Conversa con nosotros!'; //(Toma como valor predeterminado Sesión de chat con un experto)
 		embedded_svc.settings.disabledMinimizedText = 'El chat no está funcionando'; //(Toma como valor predeterminado Agente sin conexión)
@@ -43,15 +44,6 @@
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
-
-		//try
-		embedded_svc.settings.prechatBackgroundImgURL = "https://github.com/BernardoLiraBlueClip/hdi-cc/blob/main/boton-invitacion-chat.png?raw=true";
-		embedded_svc.settings.smallCompanyLogoImgURL = "https://github.com/BernardoLiraBlueClip/hdi-cc/blob/main/boton-invitacion-chat.png?raw=true";
-		embedded_svc.settings.waitingStateBackgroundImgURL = "https://github.com/BernardoLiraBlueClip/hdi-cc/blob/main/boton-invitacion-chat.png?raw=true";
-		embedded_svc.settings.avatarImgURL = "https://github.com/BernardoLiraBlueClip/hdi-cc/blob/main/boton-invitacion-chat.png?raw=true";
-		embedded_svc.settings.chatbotAvatarImgURL = "https://github.com/BernardoLiraBlueClip/hdi-cc/blob/main/boton-invitacion-chat.png?raw=true";
-		
-		
 		
 		embedded_svc.init(
 			'https://hdiseguros1--chatcenter.my.salesforce.com',
