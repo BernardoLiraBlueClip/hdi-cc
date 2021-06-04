@@ -20,7 +20,6 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
-		//https://github.com/BernardoLiraBlueClip/hdi-cc/blob/main/boton-invitacion-chat.png?raw=true
 		embedded_svc.settings.displayHelpButton = false;
 		embedded_svc.settings.language = 'es-CL'; //Por ejemplo, ingrese 'en' o 'en-US'
 		embedded_svc.settings.prechatBackgroundImgURL = "https://raw.githubusercontent.com/BernardoLiraBlueClip/hdi-cc/main/head.png?raw=true";
@@ -91,21 +90,17 @@
 <script type="text/javascript">
 $(document).ready(function() {
 
-// Store our panel into a variable.
 var $myPanel = $("#live-chat");
 
-// Get the height of the panel dynamically.
 var $myPanelHeight = parseInt($myPanel.height());
 
 // Immediately set the opacity to 0 - to hide it and set its bottom to minus its height.
 $myPanel.css({ "opacity" : 0, "bottom" : "-" + $myPanelHeight + "px" });
 
-// Set a timeout for the panel to slide and fade in.
 setTimeout(function() {
 
 $myPanel.animate({
 
-    // The CSS properties we want to animate (opacity and bottom position).
     opacity: 1,
     bottom: '0'
 
