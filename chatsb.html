@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    </head>
+    <body>        
+        <h1>Una página de sabdbox chat center 1.0</h1>
+	    
+<!------------------------------------------>
+      
+      
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #388403;
+		font-family: "Trebuchet MS", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #388403;
+	}
+</style>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //O falso
+		embedded_svc.settings.language = ''; //Por ejemplo, ingrese 'en' o 'en-US'
+
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Toma como valor predeterminado Sesión de chat con un experto)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Toma como valor predeterminado Agente sin conexión)
+
+		//embedded_svc.settings.loadingText = ''; //(Toma como valor predeterminado Cargando)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Establece el dominio para su desarrollo de modo que los visitantes puedan navegar por subdominios durante una sesión de chat)
+
+		// Configuración para Plática
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Establece el relleno automático de los campos del formulario previo al chat
+		//embedded_svc.settings.fallbackRouting = []; //Una matriz de identificadores de botones, de usuario o userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Toma como valor predeterminado la opción Contacto)
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		embedded_svc.init(
+			'https://hdiseguros1--chatcenter.my.salesforce.com',
+			'https://chatcenter-01.cs21.force.com/CC',
+			gslbBaseURL,
+			'00Dq0000000Efxe',
+			'Chat_Agents',
+			{
+				baseLiveAgentContentURL: 'https://c.la4-c1cs-dfw.salesforceliveagent.com/content',
+				deploymentId: '572q00000004E03',
+				buttonId: '573q00000004EoC',
+				baseLiveAgentURL: 'https://d.la4-c1cs-dfw.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Chat_Agents',
+				isOfflineSupportEnabled: true
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://hdiseguros1--chatcenter.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
