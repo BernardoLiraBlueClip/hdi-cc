@@ -3,7 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     </head>
     <body>        
-        <h1>Una página de Sandbox chat center 1.1</h1>
+        <h1>Una página de Sandbox chat center 1.2</h1>
 	    
 <!------------------------------------------>
       
@@ -35,8 +35,11 @@
 			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
 			// Returns a valid button ID.
 		//};
-		embedded_svc.settings.prepopulatedPrechatFields = {
-								   HDI4I_Rut__c: "7687342-9"}; //Establece el relleno automático de los campos del formulario previo al chat
+		embedded_svc.settings.prepopulatedPrechatFields = {Name: "Bernardo Lira",
+								   HDI4I_Rut__c: "7687342-9",
+								  SuppliedEmail: "bernardolira@gmail.com",
+								  SuppliedPhone: "7757457"
+								  }; //Establece el relleno automático de los campos del formulario previo al chat
 		//embedded_svc.settings.fallbackRouting = []; //Una matriz de identificadores de botones, de usuario o userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Toma como valor predeterminado la opción Contacto)
 
